@@ -1,3 +1,14 @@
+body {
+  
+}
+
+.card-container {
+  align-items: center;
+  border: 15px;
+  border-color: yellow;
+  text-align: center;
+}
+
 .card {
   border: 1px solid;
   border-radius: 5px;
@@ -12,7 +23,7 @@
 }
 
 .card:hover {
-  background-color:rgb(144, 151, 158)
+  background-color:rgb(208, 213, 218)
 }
 
 .card .card-image {
@@ -20,6 +31,7 @@
   border-radius: 50%;
   height:auto;
   margin-bottom: 10px;
+  object-fit: fill;
 }
 
 .card .card-title {
