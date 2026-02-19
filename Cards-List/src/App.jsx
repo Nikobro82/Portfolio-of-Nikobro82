@@ -1,8 +1,9 @@
+import { BrowserRouter, Routes, Route, Link, HashRouter } from 'react-router-dom';
+
 import Card from "./Card"
 import React from "react"
 
-function App() {
-  const descriptions = {
+const descriptions = {
     "Nikobro82" : {
       "desc" : "Hi! I am Niko. I am a high school senior and study Computer Science, aiming to be a future Game Developer.",
       "desc2" : "My favorite game is Destiny 2",
@@ -60,10 +61,28 @@ function App() {
     },
 
   }
+
+function App() {
+  
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path = "/" element = {<Home />} />
+        <Route path = "/project/brickbattle" element = {<Project />} />
+      </Routes>
+    </HashRouter>
+    
+
+    
+  )
+}
+
+function Home() {
   return (
     <>
       <h1 className = "header">Nikobro82</h1>
       <hr></hr>
+      <Link to="/project/brickbattle">Brickbattle</Link> |{" "}
       <div className = "card-container">
         <h2 className = "header">Studies</h2>
         <hr></hr>
@@ -89,7 +108,14 @@ function App() {
       
 
     </>
-    
+  );
+}
+
+function Project() {
+  return (
+    <>
+      <h1>LOL HI</h1>
+    </>
   )
 }
 

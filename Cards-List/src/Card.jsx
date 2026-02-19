@@ -18,6 +18,10 @@ function Card(props) {
         setDescription(descUsing)
     }
 
+    const onClickFunc = () => {
+        
+    }
+
     const profile_pictures = {
         "Nikobro82" : profilepic,
         "Destiny 2" : destiny2,
@@ -34,7 +38,8 @@ function Card(props) {
         transition = {{duration: 2.25, type: 'spring'}}
         whileHover = {{scale:1.05, rotate: "360deg"}}
         onMouseEnter = {() => updateDescription(desc2)}
-        onMouseLeave = {() => updateDescription(desc1)}>
+        onMouseLeave = {() => updateDescription(desc1)}
+        onClick={() => onClickFunc()}>
             <img src = {has_profile_pic} className = "card-image"></img>
             <h2 className = "card-title">{table.name}</h2>
 
